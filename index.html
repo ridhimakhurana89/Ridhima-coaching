@@ -1333,30 +1333,44 @@
     }
 
     .logo-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       font-family: system-ui, -apple-system, sans-serif;
-      font-size: 18px;
-      font-weight: 800;
+      font-size: 15px;
+      font-weight: 700;
       color: var(--text-primary);
-      opacity: 0.3;
+      opacity: 0.45;
       white-space: nowrap;
       transition: opacity 0.3s;
       flex-shrink: 0;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
+      letter-spacing: 0.3px;
     }
 
     .logo-item:hover {
-      opacity: 0.7;
+      opacity: 0.8;
+    }
+
+    .logo-item img {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      object-fit: contain;
     }
 
     .logo-item.featured {
-      font-size: 22px;
-      opacity: 0.55;
+      font-size: 17px;
+      opacity: 0.65;
       color: var(--accent);
     }
 
+    .logo-item.featured img {
+      width: 32px;
+      height: 32px;
+    }
+
     .logo-item.featured:hover {
-      opacity: 0.85;
+      opacity: 0.9;
     }
 
     @keyframes marquee-logos {
@@ -1556,61 +1570,49 @@
     </div>
     <div class="logos-track-wrapper">
       <div class="logos-track">
-        <span class="logo-item featured">Anthropic</span>
-        <span class="logo-item">Meta</span>
-        <span class="logo-item">Google</span>
-        <span class="logo-item featured">OpenAI</span>
-        <span class="logo-item">Harvey AI</span>
-        <span class="logo-item">Adobe</span>
-        <span class="logo-item featured">Anthropic</span>
-        <span class="logo-item">Coinbase</span>
-        <span class="logo-item">Robinhood</span>
-        <span class="logo-item featured">OpenAI</span>
-        <span class="logo-item">SoFi</span>
-        <span class="logo-item">Lyft</span>
-        <span class="logo-item">Amazon</span>
-        <span class="logo-item featured">Anthropic</span>
-        <span class="logo-item">Netflix</span>
-        <span class="logo-item">Apple</span>
-        <span class="logo-item featured">OpenAI</span>
-        <span class="logo-item">BetterUp</span>
-        <span class="logo-item">Talkiatry</span>
-        <span class="logo-item">Mural</span>
-        <span class="logo-item featured">Anthropic</span>
-        <span class="logo-item">Calendly</span>
-        <span class="logo-item">Handshake</span>
-        <span class="logo-item featured">OpenAI</span>
-        <span class="logo-item">Headway</span>
-        <span class="logo-item">Chime</span>
-        <span class="logo-item">Splunk</span>
+        <span class="logo-item featured"><img src="https://www.google.com/s2/favicons?domain=anthropic.com&sz=128" alt="Anthropic logo">Anthropic</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=meta.com&sz=128" alt="Meta logo">Meta</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=google.com&sz=128" alt="Google logo">Google</span>
+        <span class="logo-item featured"><img src="https://www.google.com/s2/favicons?domain=openai.com&sz=128" alt="OpenAI logo">OpenAI</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=harvey.ai&sz=128" alt="Harvey AI logo">Harvey AI</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=adobe.com&sz=128" alt="Adobe logo">Adobe</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=coinbase.com&sz=128" alt="Coinbase logo">Coinbase</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=robinhood.com&sz=128" alt="Robinhood logo">Robinhood</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=sofi.com&sz=128" alt="SoFi logo">SoFi</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=lyft.com&sz=128" alt="Lyft logo">Lyft</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=amazon.com&sz=128" alt="Amazon logo">Amazon</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=netflix.com&sz=128" alt="Netflix logo">Netflix</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=apple.com&sz=128" alt="Apple logo">Apple</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=betterup.com&sz=128" alt="BetterUp logo">BetterUp</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=talkiatry.com&sz=128" alt="Talkiatry logo">Talkiatry</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=mural.co&sz=128" alt="Mural logo">Mural</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=calendly.com&sz=128" alt="Calendly logo">Calendly</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=joinhandshake.com&sz=128" alt="Handshake logo">Handshake</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=headway.co&sz=128" alt="Headway logo">Headway</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=chime.com&sz=128" alt="Chime logo">Chime</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=splunk.com&sz=128" alt="Splunk logo">Splunk</span>
         <!-- Duplicate for seamless loop -->
-        <span class="logo-item featured">Anthropic</span>
-        <span class="logo-item">Meta</span>
-        <span class="logo-item">Google</span>
-        <span class="logo-item featured">OpenAI</span>
-        <span class="logo-item">Harvey AI</span>
-        <span class="logo-item">Adobe</span>
-        <span class="logo-item featured">Anthropic</span>
-        <span class="logo-item">Coinbase</span>
-        <span class="logo-item">Robinhood</span>
-        <span class="logo-item featured">OpenAI</span>
-        <span class="logo-item">SoFi</span>
-        <span class="logo-item">Lyft</span>
-        <span class="logo-item">Amazon</span>
-        <span class="logo-item featured">Anthropic</span>
-        <span class="logo-item">Netflix</span>
-        <span class="logo-item">Apple</span>
-        <span class="logo-item featured">OpenAI</span>
-        <span class="logo-item">BetterUp</span>
-        <span class="logo-item">Talkiatry</span>
-        <span class="logo-item">Mural</span>
-        <span class="logo-item featured">Anthropic</span>
-        <span class="logo-item">Calendly</span>
-        <span class="logo-item">Handshake</span>
-        <span class="logo-item featured">OpenAI</span>
-        <span class="logo-item">Headway</span>
-        <span class="logo-item">Chime</span>
-        <span class="logo-item">Splunk</span>
+        <span class="logo-item featured"><img src="https://www.google.com/s2/favicons?domain=anthropic.com&sz=128" alt="Anthropic logo">Anthropic</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=meta.com&sz=128" alt="Meta logo">Meta</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=google.com&sz=128" alt="Google logo">Google</span>
+        <span class="logo-item featured"><img src="https://www.google.com/s2/favicons?domain=openai.com&sz=128" alt="OpenAI logo">OpenAI</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=harvey.ai&sz=128" alt="Harvey AI logo">Harvey AI</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=adobe.com&sz=128" alt="Adobe logo">Adobe</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=coinbase.com&sz=128" alt="Coinbase logo">Coinbase</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=robinhood.com&sz=128" alt="Robinhood logo">Robinhood</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=sofi.com&sz=128" alt="SoFi logo">SoFi</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=lyft.com&sz=128" alt="Lyft logo">Lyft</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=amazon.com&sz=128" alt="Amazon logo">Amazon</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=netflix.com&sz=128" alt="Netflix logo">Netflix</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=apple.com&sz=128" alt="Apple logo">Apple</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=betterup.com&sz=128" alt="BetterUp logo">BetterUp</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=talkiatry.com&sz=128" alt="Talkiatry logo">Talkiatry</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=mural.co&sz=128" alt="Mural logo">Mural</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=calendly.com&sz=128" alt="Calendly logo">Calendly</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=joinhandshake.com&sz=128" alt="Handshake logo">Handshake</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=headway.co&sz=128" alt="Headway logo">Headway</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=chime.com&sz=128" alt="Chime logo">Chime</span>
+        <span class="logo-item"><img src="https://www.google.com/s2/favicons?domain=splunk.com&sz=128" alt="Splunk logo">Splunk</span>
       </div>
     </div>
   </section>
@@ -1632,22 +1634,22 @@
             <div class="about-card">
               <div class="about-card-icon">&#127919;</div>
               <h3>PM veteran, both sides of the table</h3>
-              <p>16+ years building products across India and the Bay Area. I've been both the candidate and the interviewer. I coach L6-L9 PMs because I've lived those levels and know exactly what the bar looks like at each one.</p>
+              <p>16+ years in product across India and the Bay Area. I've been the candidate and the interviewer. I coach L6-L9 PMs because I've lived those levels and know the bar at each one.</p>
             </div>
             <div class="about-card">
               <div class="about-card-icon">&#128170;</div>
               <h3>Cancer survivor</h3>
-              <p>This taught me more about mindset than any job ever could. How to stay focused when everything feels uncertain, reframe setbacks, and show up with genuine confidence. I don't just teach frameworks. I teach you how to walk into rooms like you belong there.</p>
+              <p>This taught me more about mindset than any job ever could. How to stay focused when everything feels uncertain and show up with genuine confidence. I teach you how to walk into rooms like you belong there.</p>
             </div>
             <div class="about-card">
               <div class="about-card-icon">&#127968;</div>
               <h3>Built my own home in Los Gatos</h3>
-              <p>From scratch. Every decision, every tradeoff, every setback. It taught me persistence, patience, and the ability to hold a long-term vision while solving problems day by day. That's the same energy I bring to coaching: methodical and relentlessly focused on the outcome.</p>
+              <p>From scratch. Every decision, every tradeoff, every setback. It taught me persistence and how to hold a long-term vision while solving problems daily. Same energy I bring to coaching.</p>
             </div>
             <div class="about-card">
               <div class="about-card-icon">&#128118;</div>
               <h3>Mom to a 4-year-old</h3>
-              <p>Nothing recalibrates your priorities like a small human who needs you fully present. It's sharpened my understanding of what actually matters. This interview is one chapter, not the whole story. That perspective reduces anxiety and lets your real ability come through.</p>
+              <p>Nothing recalibrates priorities like a small human who needs you fully present. This interview is one chapter, not the whole story. That perspective reduces anxiety and lets your real ability come through.</p>
             </div>
           </div>
         </div>
@@ -1664,7 +1666,7 @@
     <div class="container">
       <div class="section-header fade-in">
         <h2>Four rounds. One coach who's been on both sides</h2>
-        <p>I prepare L6-L9 PMs for every round at top AI companies, with specificity generic prep can't match.</p>
+        <p>I prepare L6-L9 PMs for every round at top AI companies with specificity generic prep can't match.</p>
       </div>
 
       <div class="section-with-photo photo-right fade-in">
@@ -1708,7 +1710,7 @@
     <div class="container">
       <div class="approach-header fade-in">
         <h2>I don't just prep you for interviews<br>I help you think like a PM who gets it</h2>
-        <p>How I work with L6-L9 PMs to get you from where you are to where you want to be.</p>
+        <p>How I take L6-L9 PMs from where you are to where you want to be.</p>
       </div>
 
       <!-- Infographic -->
@@ -1722,7 +1724,7 @@
         <div class="infographic-step">
           <div class="infographic-number">2</div>
           <h4>Build Frameworks</h4>
-          <p>Reusable mental models for each round type, not memorized answers that fall apart under pressure.</p>
+          <p>Reusable mental models for each round type, not memorized answers that crumble under pressure.</p>
         </div>
         <div class="infographic-arrow">&rarr;</div>
         <div class="infographic-step">
@@ -1737,17 +1739,17 @@
         <div class="approach-card">
           <div class="card-icon">&#128269;</div>
           <h4>I've been in the interviewer's seat</h4>
-          <p>Calibrated at Meta, Google, and SoFi. I've evaluated hundreds of candidates and know what separates a good answer from one that gets an offer.</p>
+          <p>Calibrated at Meta, Google, and SoFi. I know what separates a good answer from one that gets an offer.</p>
         </div>
         <div class="approach-card">
           <div class="card-icon">&#9881;</div>
           <h4>I'm designing the new interview loops</h4>
-          <p>Working with companies to build interviews that test for AI fluency. I know the signals they screen for because I'm helping define them.</p>
+          <p>I'm building interviews that test for AI fluency. I know the signals because I'm helping define them.</p>
         </div>
         <div class="approach-card">
           <div class="card-icon">&#127891;</div>
           <h4>I teach you to fish</h4>
-          <p>You'll build frameworks and mental models you can apply to any question, at any company, for the rest of your career.</p>
+          <p>Frameworks and mental models you can apply to any question, at any company, for the rest of your career.</p>
         </div>
       </div>
 
@@ -2315,23 +2317,23 @@
           <ul>
             <li>
               <span class="li-icon">&#10003;</span>
-              <span>You're an L6-L9 PM interviewing at Anthropic, OpenAI, DeepMind, or Meta and want prep from someone who knows those loops</span>
+              <span>You're an L6-L9 PM targeting Anthropic, OpenAI, DeepMind, or Meta</span>
             </li>
             <li>
               <span class="li-icon">&#10003;</span>
-              <span>Your target company tests for AI fluency through dedicated AI rounds or weaves it into Product Sense and Analytical questions</span>
+              <span>Your target company tests for AI fluency in dedicated rounds or woven into Product Sense and Analytical</span>
             </li>
             <li>
               <span class="li-icon">&#10003;</span>
-              <span>You're already in the loop and need fast, personalized coaching before the clock runs out</span>
+              <span>You're already in a loop and need fast, calibrated coaching before the clock runs out</span>
             </li>
             <li>
               <span class="li-icon">&#10003;</span>
-              <span>You're not in a loop yet but want to build a rock-solid foundation so you're ready when the opportunity comes</span>
+              <span>You want to build a rock-solid foundation before opportunities come</span>
             </li>
             <li>
               <span class="li-icon">&#10003;</span>
-              <span>You want to showcase AI fluency naturally, without it feeling forced</span>
+              <span>You want to showcase AI fluency naturally, not forced</span>
             </li>
           </ul>
         </div>
@@ -2341,26 +2343,26 @@
           <ul>
             <li>
               <span class="li-icon">&#10007;</span>
-              <span>You want a massive question bank to grind through on your own</span>
+              <span>You want a question bank to grind through solo</span>
             </li>
             <li>
               <span class="li-icon">&#10007;</span>
-              <span>You want broad FAANG prep not tailored to AI-era roles</span>
+              <span>You want broad FAANG prep, not AI-era specialization</span>
             </li>
             <li>
               <span class="li-icon">&#10007;</span>
-              <span>You're still exploring PM as a career and haven't narrowed your targets</span>
+              <span>You're still exploring PM as a career</span>
             </li>
             <li>
               <span class="li-icon">&#10007;</span>
-              <span>You need resume writing or job search help, not interview coaching</span>
+              <span>You need resume or job search help, not interview coaching</span>
             </li>
           </ul>
         </div>
       </div>
 
       <div class="for-callout fade-in">
-        <p><strong>Interview loops move fast.</strong> Once you're in, you often have 2-3 weeks to prepare for rounds that could change your career. These roles pay $300K-$950K. You don't want half-baked prep for an opportunity this significant.</p>
+        <p><strong>Interview loops move fast.</strong> You often have 2-3 weeks to prepare for rounds that could change your career. These roles pay $300K-$950K. You don't want half-baked prep for this.</p>
         <a href="https://calendly.com/ridhimakhurana/meeting-with-ridhima" class="btn-primary">Let's Talk About Where You Are</a>
       </div>
     </div>
@@ -2375,10 +2377,9 @@
         </div>
         <div class="selective-text">
           <h2>A note on how I work</h2>
-          <p>I'm selective about who I take on, and that's by design.</p>
-          <p>I have a full-time job, a 4-year-old, and a startup I'm building. My time is limited, and I want every coaching minute to create a step-change difference.</p>
-          <p>During our clarity call, I'm assessing fit just as much as you are. If I can move the needle, I'll tell you how. <strong>If I'm not the right coach for you, I'll tell you that too and refer you to someone in my network who is.</strong></p>
-          <p>I do this because helping people land life-changing roles is deeply satisfying. I believe in democratizing insider knowledge that used to only live in personal networks at elite companies.</p>
+          <p>I'm selective about who I take on. That's by design.</p>
+          <p>I have a full-time job, a 4-year-old, and a startup. My time is limited, and every coaching minute should create a step-change difference.</p>
+          <p>During our clarity call, I'm assessing fit just as much as you are. <strong>If I'm not the right coach for you, I'll say so and refer you to someone who is.</strong></p>
           <div class="selective-values" style="margin-top: 24px;">
             <div class="selective-value">
               <h4><span class="sv-icon">&#128161;</span> Quality over quantity</h4>
@@ -2390,7 +2391,7 @@
             </div>
             <div class="selective-value">
               <h4><span class="sv-icon">&#127775;</span> Step-change results</h4>
-              <p>I only take on clients where I'm confident I can create a real leap in interview performance, not incremental improvement.</p>
+              <p>I take on clients where I can create a real leap, not incremental improvement.</p>
             </div>
           </div>
         </div>
@@ -2398,7 +2399,7 @@
 
       <div class="noise-callout fade-in">
         <h4>A word about the coaching market right now.</h4>
-        <p>There's a lot of noise out there. Too many people calling themselves experts, charging steep prices, and delivering little value. When you're in prep mode, you're anxious, time-pressured, and willing to pay for help. <strong>Some coaches exploit that.</strong> Whether you work with me or someone else, make sure they have real credentials, real outcomes, and transparency about what they can do for you.</p>
+        <p>Too many people calling themselves experts, charging steep prices, delivering little value. When you're in prep mode, you're anxious and willing to pay. <strong>Some coaches exploit that.</strong> Whether you work with me or someone else, make sure they have real credentials, real outcomes, and transparency.</p>
       </div>
 
       <div class="section-cta fade-in">
