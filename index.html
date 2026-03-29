@@ -239,6 +239,39 @@
 
     .nav-links a:hover { color: var(--accent); }
 
+    /* Hamburger button */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      flex-direction: column;
+      gap: 5px;
+      z-index: 102;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-primary);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .nav-toggle.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .nav-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-toggle.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
     .btn-primary {
       display: inline-block;
       background: var(--accent);
@@ -1209,6 +1242,48 @@
     /* === RESPONSIVE === */
     @media (max-width: 768px) {
       body { font-size: 16px; }
+
+      /* Mobile nav */
+      .nav-toggle { display: flex; }
+
+      .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #FFFFFF;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        z-index: 101;
+        transform: translateX(100%);
+        pointer-events: none;
+        transition: transform 0.3s ease;
+        opacity: 1;
+      }
+
+      .nav-links.open {
+        transform: translateX(0);
+        pointer-events: auto;
+      }
+
+      .nav-links a {
+        font-size: 20px;
+        padding: 16px 0;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .nav-links a.hide-mobile { display: block; }
+
+      .nav-links a.btn-primary-sm {
+        margin-top: 16px;
+        padding: 14px 36px;
+        font-size: 16px;
+      }
+
       .hero { padding: 48px 0 40px; }
       .hero-inner { grid-template-columns: 1fr; gap: 32px; }
       .hero-text h1 { font-size: 34px; }
@@ -1232,8 +1307,6 @@
       .comparison-table tbody td { padding: 12px 14px; }
       .testimonials-grid { columns: 1; }
       .section-header h2 { font-size: 26px; }
-      .nav-links { gap: 12px; }
-      .nav-links a.hide-mobile { display: none; }
       .subscribe-bar { flex-direction: column; text-align: center; gap: 10px; }
     }
 
@@ -1502,6 +1575,11 @@
   <nav id="main-nav" aria-label="Main navigation">
     <div class="container">
       <a href="#" class="nav-brand">Ridhima Khurana</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <div class="nav-links">
         <a href="#about" class="hide-mobile">About Me</a>
         <a href="#approach" class="hide-mobile">My Approach</a>
@@ -2577,6 +2655,25 @@
         }
       });
     });
+    // === MOBILE NAV TOGGLE ===
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('open');
+      navLinks.classList.toggle('open');
+      document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+    });
+
+    // Close menu when a nav link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
     // === FAQ ACCORDION ===
     document.querySelectorAll('.faq-question').forEach(btn => {
       btn.addEventListener('click', () => {
