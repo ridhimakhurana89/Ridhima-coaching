@@ -215,12 +215,37 @@
     }
 
     .nav-brand {
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      position: relative;
+    }
+
+    .logo-first {
       font-family: 'Lora', serif;
       font-weight: 700;
-      font-size: 20px;
-      color: var(--text-primary);
-      text-decoration: none;
+      font-size: 21px;
+      color: var(--accent);
       letter-spacing: 0.3px;
+    }
+
+    .logo-last {
+      font-family: 'Lora', serif;
+      font-weight: 400;
+      font-size: 21px;
+      color: var(--sub-color);
+      letter-spacing: 0.3px;
+    }
+
+    .logo-accent {
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 32px;
+      height: 2px;
+      background: var(--sub-color);
+      border-radius: 2px;
     }
 
     .nav-links {
@@ -1574,7 +1599,9 @@
   <!-- NAV (FIXED) -->
   <nav id="main-nav" aria-label="Main navigation">
     <div class="container">
-      <a href="#" class="nav-brand">Ridhima Khurana</a>
+      <a href="#" class="nav-brand">
+        <span class="logo-first">Ridhima</span><span class="logo-last">Khurana</span><span class="logo-accent"></span>
+      </a>
       <button class="nav-toggle" aria-label="Toggle menu">
         <span></span>
         <span></span>
